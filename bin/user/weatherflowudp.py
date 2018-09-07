@@ -31,18 +31,18 @@ stanza.  For example:
         outTemp = air_temperature.AR-00004424.obs_air
         outHumidity = relative_humidity.AR-00004424.obs_air
         pressure =  station_pressure.AR-00004424.obs_air
-        # lightning_strikes =  lightning_strike_count.AR-00004424.obs_air
-        # avg_distance =  lightning_strike_avg_distance.AR-00004424.obs_air
+        # lightningStrikes =  lightning_strike_count.AR-00004424.obs_air
+        # lightningAvgDistance =  lightning_strike_avg_distance.AR-00004424.obs_air
         outTempBatteryStatus =  battery.AR-00004424.obs_air
         windSpeed = wind_speed.SK-00001234.rapid_wind
         windDir = wind_direction.SK-00001234.rapid_wind
-        # lux = illuminance.SK-00001234.obs_sky
+        lux = illuminance.SK-00001234.obs_sky
         UV = uv.SK-00001234.obs_sky
         rain = rain_accumulated.SK-00001234.obs_sky
         windBatteryStatus = battery.SK-00001234.obs_sky
         radiation = solar_radiation.SK-00001234.obs_sky
-        # lightningYYY = distance.AR-00004424.evt_strike
-        # lightningZZZ = energy.AR-00004424.evt_strike
+        # lightningDistance = distance.AR-00004424.evt_strike
+        # lightningEnergy = energy.AR-00004424.evt_strike
 
 If no sensor_map is specified, no data will be collected.
 
