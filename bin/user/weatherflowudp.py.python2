@@ -31,18 +31,18 @@ stanza.  For example, on an Air/Sky setup:
         outTemp = air_temperature.AR-00004424.obs_air
         outHumidity = relative_humidity.AR-00004424.obs_air
         pressure =  station_pressure.AR-00004424.obs_air
-        # lightningStrikes =  lightning_strike_count.AR-00004424.obs_air
-        # lightningAvgDistance =  lightning_strike_avg_distance.AR-00004424.obs_air
+        # lightning_strikes =  lightning_strike_count.AR-00004424.obs_air
+        # avg_distance =  lightning_strike_avg_distance.AR-00004424.obs_air
         outTempBatteryStatus =  battery.AR-00004424.obs_air
         windSpeed = wind_speed.SK-00001234.rapid_wind
         windDir = wind_direction.SK-00001234.rapid_wind
-        lux = illuminance.SK-00001234.obs_sky
+        # lux = illuminance.SK-00001234.obs_sky
         UV = uv.SK-00001234.obs_sky
         rain = rain_accumulated.SK-00001234.obs_sky
         windBatteryStatus = battery.SK-00001234.obs_sky
         radiation = solar_radiation.SK-00001234.obs_sky
-        # lightningDistance = distance.AR-00004424.evt_strike
-        # lightningEnergy = energy.AR-00004424.evt_strike
+        # lightningYYY = distance.AR-00004424.evt_strike
+        # lightningZZZ = energy.AR-00004424.evt_strike
 
 *** If no sensor_map is specified, no data will be collected. ***
 
@@ -197,8 +197,8 @@ def sendMyLoopPacket(pkt,sensor_map):
             # weewx.METRICWX = mm/mps ; weewx.METRIC = cm/kph
             'usUnits' : weewx.METRICWX}
 
-    #for pkt_weewx, pkt_label in sensor_map.iteritems():     # Python 2
-    for pkt_weewx, pkt_label in list(sensor_map.items()):    # Python 3
+    for pkt_weewx, pkt_label in sensor_map.iteritems():     # Python 2
+    #for pkt_weewx, pkt_label in list(sensor_map.items()):    # Python 3
         if pkt_label.replace("-","_") in pkt:
            packet[pkt_weewx] = pkt[pkt_label.replace("-","_")]
 
@@ -211,8 +211,8 @@ def parseUDPPacket(pkt):
             serial_number = pkt['serial_number'].replace("-","_")
             pkt_type = pkt['type']
             pkt_label = serial_number + "." + pkt_type
-            #pkt_keys = pkt.keys()         # Python 2
-            pkt_keys = list(pkt.keys())    # Python 3
+            pkt_keys = pkt.keys()         # Python 2
+            #pkt_keys = list(pkt.keys())    # Python 3
             for i in pkt_keys:
                 pkt_item = i + "." + pkt_label
                 packet[pkt_item] = pkt[i]
@@ -281,8 +281,8 @@ class WeatherFlowUDPDriver(weewx.drivers.AbstractDevice):
         self._sensor_map = stn_dict.get('sensor_map', {})
         loginf('sensor map is %s' % self._sensor_map)
         loginf('*** Sensor names per packet type')
-        #for pkt_type in fields.keys():                  # Python 2
-        for pkt_type in list(fields.keys()):             # Python 3
+        for pkt_type in fields.keys():                  # Python 2
+        #for pkt_type in list(fields.keys()):             # Python 3
             loginf('packet %s: %s' % (pkt_type,fields[pkt_type]))
 
     def hardware_name(self):
