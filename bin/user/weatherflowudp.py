@@ -31,8 +31,8 @@ stanza.  For example, on an Air/Sky setup:
         outTemp = air_temperature.AR-00004424.obs_air
         outHumidity = relative_humidity.AR-00004424.obs_air
         pressure =  station_pressure.AR-00004424.obs_air
-        # lightningStrikes =  lightning_strike_count.AR-00004424.obs_air
-        # lightningAvgDistance =  lightning_strike_avg_distance.AR-00004424.obs_air
+        # lightning_strike_count =  lightning_strike_count.AR-00004424.obs_air
+        # lightning_avg_distance =  lightning_strike_avg_distance.AR-00004424.obs_air
         outTempBatteryStatus =  battery.AR-00004424.obs_air
         windSpeed = wind_speed.SK-00001234.rapid_wind
         windDir = wind_direction.SK-00001234.rapid_wind
@@ -41,8 +41,8 @@ stanza.  For example, on an Air/Sky setup:
         rain = rain_accumulated.SK-00001234.obs_sky
         windBatteryStatus = battery.SK-00001234.obs_sky
         radiation = solar_radiation.SK-00001234.obs_sky
-        # lightningDistance = distance.AR-00004424.evt_strike
-        # lightningEnergy = energy.AR-00004424.evt_strike
+        # lightning_distance = distance.AR-00004424.evt_strike
+        # lightning_energy = energy.AR-00004424.evt_strike
 
 *** If no sensor_map is specified, no data will be collected. ***
 
