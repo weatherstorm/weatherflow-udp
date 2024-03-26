@@ -1,4 +1,4 @@
-    # This section is for the TEMPEST WeatherFlow Bridge packets, via UDP broadcast on local subnet
+    #This section is for the TEMPEST WeatherFlow Bridge packets, via UDP broadcast on local subnet
 
     [[sensor_map]]
         outTemp = air_temperature.AR-00004424.obs_air
