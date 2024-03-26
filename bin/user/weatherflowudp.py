@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Copyright 2017-2020 Arthur Emerson, vreihen@yahoo.com
+# Copyright 2017-2024 Arthur Emerson, vreihen@yahoo.com
 # Distributed under the terms of the GNU Public License (GPLv3)
 
 """
@@ -161,7 +161,7 @@ from collections import namedtuple
 import datetime
 
 # Default settings...
-DRIVER_VERSION = "1.10"
+DRIVER_VERSION = "1.10.2"
 HARDWARE_NAME = "WeatherFlow"
 DRIVER_NAME = 'WeatherFlowUDP'
 
